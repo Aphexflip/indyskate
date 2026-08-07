@@ -1,0 +1,12 @@
+{
+  "name": "indyskate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "IndySkate — Indianapolis skateboarding archive and current scene",
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
