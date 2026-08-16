@@ -1,6 +1,6 @@
 # IndySkate Project State
 
-Last updated: 2026-08-07
+Last updated: 2026-08-16
 
 ## Production
 - Public domain: https://indyskate.com
@@ -8,7 +8,7 @@ Last updated: 2026-08-07
 - Default branch: `main`
 - Baseline merge commit: `b3d2df19a983856efaafb555b6a73728609ec62d`
 - Initial bootstrap PR: #1 — merged
-- Cloudflare Git deployment: not yet verified/connected
+- Cloudflare Git deployment: connection re-test initiated 2026-08-16 via a harmless metadata-only `main` commit; awaiting deployment evidence
 
 ## Current product direction
 Minimal archive-first IndySkate site based on the selected Concept 3 direction.
@@ -29,8 +29,8 @@ Minimal archive-first IndySkate site based on the selected Concept 3 direction.
 - #6 Build Indianapolis skate spot archive
 
 ## Current priority
-1. Connect `Aphexflip/indyskate` to Cloudflare Pages with `main` as production and `public` as output.
-2. Verify automatic production and preview deployments.
+1. Verify automatic Cloudflare production deployment from `main`.
+2. Close #2 once deployment evidence is confirmed.
 3. Recover and catalog real IndySkate material from owned files, current site sources, and archived site captures.
 4. Populate the archive only with verified/source-backed records.
 
