@@ -2,8 +2,11 @@
 
 | Feature | Status | Notes |
 |---|---|---|
-| Minimal homepage shell | IN PROGRESS | Implemented on `agent/initial-archive-build` |
-| Responsive mobile layout | IN PROGRESS | Initial CSS included |
+| Minimal homepage shell | COMPLETE | Archive-first editorial homepage with intentional recovery state |
+| Responsive mobile layout | COMPLETE | Mobile-first responsive layout in current cleanup |
+| Archive recovery explainer | COMPLETE | Makes the empty state deliberate and transparent |
+| Community archive submission CTA | STARTED | Email-based submission path added; structured form can come later |
+| Verified record counter | COMPLETE | Count is derived from verified records in archive data |
 | Data-driven archive records | IN PROGRESS | Empty verified dataset wired into UI |
 | Archive year browsing | STARTED | Renders years once records exist |
 | Photo archive | STARTED | Renders verified photo records once imported |
@@ -13,14 +16,13 @@
 | Indianapolis spots | PLANNED | Historical + current spot information |
 | Wayback recovery | PLANNED | Recover old IndySkate pages/assets and document provenance |
 | Search | PLANNED | Archive-wide search after meaningful content volume exists |
-| Cloudflare Pages auto-deploy | BLOCKED ON SETUP | Requires account-side Git integration/verification |
+| Cloudflare Pages auto-deploy | CONNECTED | Public site is deploying from repository changes |
 | Cloudflare R2 media vault | FUTURE | For large originals and preservation assets |
 | Automated link/media QA | PLANNED | Extend GitHub validation workflow |
-| Community submissions | FUTURE | Must include moderation/source workflow |
 
 ## Status meanings
 - PLANNED: agreed direction, not implemented.
-- STARTED: foundation exists but not feature-complete.
+- STARTED: foundation exists but is not feature-complete.
 - IN PROGRESS: actively being built/tested.
-- BLOCKED ON SETUP: implementation depends on account-side configuration.
+- COMPLETE: current intended scope is implemented.
 - FUTURE: intentionally deferred.

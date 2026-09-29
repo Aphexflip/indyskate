@@ -1,38 +1,41 @@
 # IndySkate Project State
 
-Last updated: 2026-08-16
+Last updated: 2026-09-29
 
 ## Production
 - Public domain: https://indyskate.com
 - GitHub repository: `Aphexflip/indyskate`
 - Default branch: `main`
-- Baseline merge commit: `b3d2df19a983856efaafb555b6a73728609ec62d`
-- Initial bootstrap PR: #1 — merged
-- Cloudflare Git deployment: connection re-test initiated 2026-08-16 via a harmless metadata-only `main` commit; awaiting deployment evidence
+- Current cleanup branch: `agent/homepage-cleanup-2026-09-29`
+- Cloudflare Git deployment is connected to the public site.
 
 ## Current product direction
-Minimal archive-first IndySkate site based on the selected Concept 3 direction.
+Minimal, archive-first IndySkate site that feels complete even while the historical archive is still being recovered.
 
 ## Current implementation
 - Static site under `public/`
 - Data-driven archive file at `public/data/archive.json`
 - Responsive editorial layout
+- Homepage now explains the archive mission instead of looking accidentally unfinished
+- Verified-record counter wired to archive data
+- Clear archive-recovery / submission call to action
 - No fake historical records or generated archive imagery
-- Empty-state UI until verified material is imported
+- Empty-state UI intentionally explains why unverified content is not published
 - Repository validation workflow enabled
 
 ## Current backlog
-- #2 Connect GitHub repository to Cloudflare Pages
-- #3 Recover historical IndySkate site and media
-- #4 Build archive year browser from verified records
-- #5 Build verified Indy video archive with in-site playback
-- #6 Build Indianapolis skate spot archive
+- Recover historical IndySkate site and media
+- Build archive year browser from verified records
+- Build verified Indy video archive with in-site playback
+- Build Indianapolis skate spot archive
+- Import first source-backed archive records
+- Replace email-only submissions with a structured submission form when useful
 
 ## Current priority
-1. Verify automatic Cloudflare production deployment from `main`.
-2. Close #2 once deployment evidence is confirmed.
-3. Recover and catalog real IndySkate material from owned files, current site sources, and archived site captures.
-4. Populate the archive only with verified/source-backed records.
+1. Ship the homepage cleanup after validation.
+2. Recover and catalog real IndySkate material from owned files, current site sources, and archived site captures.
+3. Populate the archive only with verified/source-backed records.
+4. Turn the first recovered material into useful year, skater, spot, photo, and video views.
 
 ## Important constraints
 - Repository evidence and source files override chat assumptions.
