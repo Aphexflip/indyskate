@@ -6,8 +6,9 @@ Last updated: 2026-09-29
 - Public domain: https://indyskate.com
 - GitHub repository: `Aphexflip/indyskate`
 - Default branch: `main`
-- Current cleanup branch: `agent/homepage-cleanup-2026-09-29`
-- Cloudflare Git deployment is connected to the public site.
+- Homepage cleanup merged to `main` in PR #7 and repository validation passed.
+- The public domain is still serving the legacy site, so the new GitHub build is **not yet the production site**.
+- Deployment/DNS connection remains the current blocker. GitHub issue #2 tracks this work.
 
 ## Current product direction
 Minimal, archive-first IndySkate site that feels complete even while the historical archive is still being recovered.
@@ -16,7 +17,7 @@ Minimal, archive-first IndySkate site that feels complete even while the histori
 - Static site under `public/`
 - Data-driven archive file at `public/data/archive.json`
 - Responsive editorial layout
-- Homepage now explains the archive mission instead of looking accidentally unfinished
+- Homepage explains the archive mission instead of looking accidentally unfinished
 - Verified-record counter wired to archive data
 - Clear archive-recovery / submission call to action
 - No fake historical records or generated archive imagery
@@ -24,6 +25,7 @@ Minimal, archive-first IndySkate site that feels complete even while the histori
 - Repository validation workflow enabled
 
 ## Current backlog
+- Connect the production domain to the new GitHub/Cloudflare deployment
 - Recover historical IndySkate site and media
 - Build archive year browser from verified records
 - Build verified Indy video archive with in-site playback
@@ -32,7 +34,7 @@ Minimal, archive-first IndySkate site that feels complete even while the histori
 - Replace email-only submissions with a structured submission form when useful
 
 ## Current priority
-1. Ship the homepage cleanup after validation.
+1. Point production at the new GitHub build and verify automatic deploys from `main`.
 2. Recover and catalog real IndySkate material from owned files, current site sources, and archived site captures.
 3. Populate the archive only with verified/source-backed records.
 4. Turn the first recovered material into useful year, skater, spot, photo, and video views.
