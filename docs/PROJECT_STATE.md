@@ -8,13 +8,15 @@ Last updated: 2026-09-29
 - Default branch: `main`
 - Homepage cleanup merged to `main` in PR #7 and repository validation passed.
 - The public domain is still serving the legacy site, so the new GitHub build is **not yet the production site**.
-- Deployment/DNS connection remains the current blocker. GitHub issue #2 tracks this work.
+- Cloudflare deployment work is active. The repo now includes a Workers Static Assets configuration targeting `public/`, which matches Cloudflare's current recommended path for new static sites.
+- Deployment/DNS connection remains the current blocker until the Cloudflare project and custom domains are verified. GitHub issue #2 tracks this work.
 
 ## Current product direction
 Minimal, archive-first IndySkate site that feels complete even while the historical archive is still being recovered.
 
 ## Current implementation
 - Static site under `public/`
+- Cloudflare Workers Static Assets deployment configuration in `wrangler.jsonc`
 - Data-driven archive file at `public/data/archive.json`
 - Responsive editorial layout
 - Homepage explains the archive mission instead of looking accidentally unfinished
