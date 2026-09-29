@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="IndySkate — a source-backed archive of Indianapolis skateboarding history and the current scene.">
-  <meta name="theme-color" content="#f3f1eb">
+  <meta name="theme-color" content="#0b0b0b">
   <meta property="og:title" content="IndySkate — Indianapolis Skateboarding Archive">
   <meta property="og:description" content="Preserving Indianapolis skateboarding history with real, attributable photos, video, spots, zines, and stories.">
   <meta property="og:type" content="website">
@@ -26,25 +26,69 @@
   <main id="top">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">INDIANAPOLIS, INDIANA</p>
-        <h1 id="hero-title">THE INDY<br>SKATEBOARDING<br>ARCHIVE.</h1>
+        <p class="eyebrow">INDIANAPOLIS, INDIANA · SOURCE-BACKED ARCHIVE</p>
+        <h1 id="hero-title">INDY SKATEBOARDING.<br><span>PAST → PRESENT.</span></h1>
         <p class="hero-intro">
-          Photos, video, spots, skaters, flyers, zines, and stories — preserved from real sources,
-          credited when known, and left unknown when they are not.
+          A permanent archive for Indianapolis skateboarding — photos, video, skaters, spots,
+          flyers, zines and stories. Real material only. Credited when known. Unknown when it isn't.
         </p>
+        <div class="hero-actions">
+          <a class="cta primary" href="#archive">BROWSE ARCHIVE →</a>
+          <a class="cta" href="#recover">SUBMIT HISTORY ↗</a>
+        </div>
       </div>
-      <div class="hero-meta" aria-label="Archive status">
-        <span>PAST → PRESENT</span>
-        <span id="record-count">0 VERIFIED RECORDS</span>
+
+      <aside class="archive-status" aria-label="Archive status">
+        <div class="status-head"><span>ARCHIVE STATUS</span><strong>REBUILDING</strong></div>
+        <div class="status-number" id="record-count">0 VERIFIED RECORDS</div>
+        <p>We are rebuilding the archive from real source material instead of filling the site with invented history.</p>
+      </aside>
+    </section>
+
+    <section class="status-strip">
+      <div class="wrap status-strip-inner">
+        <span>ARCHIVE RECOVERY ACTIVE</span><i>•</i>
+        <span>NO FAKE DATA</span><i>•</i>
+        <span>COMMUNITY SUBMISSIONS OPEN</span><i>•</i>
+        <span>INDIANAPOLIS, IN</span>
       </div>
     </section>
 
-    <section class="manifesto wrap">
-      <div class="manifesto-label">WHAT THIS IS</div>
-      <p>
-        IndySkate is being rebuilt as a permanent, source-backed record of Indianapolis skateboarding.
-        No fake history. No filler. The archive grows only when real material is recovered, verified, or submitted.
-      </p>
+    <section id="archive" class="archive-shell wrap" aria-labelledby="archive-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BROWSE</p>
+          <h2 id="archive-title">THE ARCHIVE</h2>
+        </div>
+        <p>Every record should tell you what it is, when it is from, who made it, where it came from, and how sure we are.</p>
+      </div>
+
+      <div class="archive-dashboard">
+        <details open>
+          <summary><span><b>01</b> YEARS</span><span>+</span></summary>
+          <div id="years-list" class="detail-body muted">No verified year records loaded yet.</div>
+        </details>
+        <details>
+          <summary><span><b>02</b> PHOTOS</span><span>+</span></summary>
+          <div id="photos-list" class="detail-body muted">Verified archive photos will appear here.</div>
+        </details>
+        <details id="videos">
+          <summary><span><b>03</b> VIDEOS</span><span>+</span></summary>
+          <div id="videos-list" class="detail-body muted">Verified videos and supported embeds will appear here.</div>
+        </details>
+        <details>
+          <summary><span><b>04</b> ZINES / PRINT / FLYERS</span><span>+</span></summary>
+          <div class="detail-body muted">Source-backed scans and print material will live here.</div>
+        </details>
+        <details>
+          <summary><span><b>05</b> SKATERS</span><span>+</span></summary>
+          <div class="detail-body muted">Skater pages will be built from verified archive records and submissions.</div>
+        </details>
+        <details id="spots">
+          <summary><span><b>06</b> SPOTS</span><span>+</span></summary>
+          <div class="detail-body muted">Indianapolis spot history and current information will be added as it is verified.</div>
+        </details>
+      </div>
     </section>
 
     <section class="featured wrap" aria-labelledby="featured-title">
@@ -55,65 +99,26 @@
       <div id="featured-content" class="featured-content" aria-live="polite">
         <div class="empty-feature">
           <div>
-            <p class="status">ARCHIVE RECOVERY ACTIVE</p>
-            <h3>The shelves are empty on purpose.</h3>
+            <p class="status">NOTHING VERIFIED YET</p>
+            <h3>The archive starts empty.</h3>
           </div>
           <p>
-            The new archive will not invent material just to look finished. Real IndySkate media will appear here
-            as original files, old site captures, creator-hosted embeds, and community submissions are recovered and sourced.
+            That is intentional. The first item appears only when we have real source material worth preserving.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="archive" class="archive-shell wrap" aria-labelledby="archive-title">
-      <div class="section-heading">
-        <p class="eyebrow">BROWSE</p>
-        <h2 id="archive-title">THE ARCHIVE</h2>
-        <p>Every published item should answer the same questions: what is it, when is it from, who made it, where did it come from, and how sure are we?</p>
-      </div>
-
-      <div class="browse">
-        <details open>
-          <summary><span>BROWSE YEARS</span><span>+</span></summary>
-          <div id="years-list" class="detail-body muted">No verified year records loaded yet.</div>
-        </details>
-        <details>
-          <summary><span>PHOTOS</span><span>+</span></summary>
-          <div id="photos-list" class="detail-body muted">Verified archive photos will appear here.</div>
-        </details>
-        <details id="videos">
-          <summary><span>VIDEOS</span><span>+</span></summary>
-          <div id="videos-list" class="detail-body muted">Verified videos and supported embeds will appear here.</div>
-        </details>
-        <details>
-          <summary><span>ZINES / PRINT / FLYERS</span><span>+</span></summary>
-          <div class="detail-body muted">Source-backed scans and print material will live here.</div>
-        </details>
-        <details>
-          <summary><span>SKATERS</span><span>+</span></summary>
-          <div class="detail-body muted">Skater pages will be built from verified archive records and submissions.</div>
-        </details>
-        <details id="spots">
-          <summary><span>SPOTS</span><span>+</span></summary>
-          <div class="detail-body muted">Indianapolis spot history and current information will be added as it is verified.</div>
-        </details>
-      </div>
-    </section>
-
     <section id="recover" class="recovery wrap" aria-labelledby="recover-title">
-      <div class="section-rule">
-        <h2 id="recover-title">HELP REBUILD INDYSKATE</h2>
-        <span aria-hidden="true">↗</span>
-      </div>
-      <div class="recovery-grid">
+      <div class="recovery-card">
         <div>
-          <p class="recovery-lead">Have old Indy skate footage, photos, flyers, zines, site backups, spot information, or names we should preserve?</p>
-          <a class="cta" href="mailto:aphexflip@hotmail.com?subject=IndySkate%20Archive%20Submission">SEND ARCHIVE MATERIAL →</a>
+          <p class="eyebrow">HELP BUILD THE RECORD</p>
+          <h2 id="recover-title">GOT OLD INDY SKATE STUFF?</h2>
+          <p class="recovery-lead">Photos, footage, flyers, zines, spot info, names, old site backups — send it in.</p>
         </div>
-        <div class="submission-notes">
+        <div class="recovery-actions">
+          <a class="cta primary" href="mailto:aphexflip@hotmail.com?subject=IndySkate%20Archive%20Submission">SEND ARCHIVE MATERIAL →</a>
           <p><strong>Useful context:</strong> approximate year, skater, filmer/photographer, spot, original source, and how you want to be credited.</p>
-          <p>Unknown details are fine. We would rather publish “unknown” than guess.</p>
         </div>
       </div>
     </section>
@@ -125,7 +130,7 @@
       </div>
       <p>
         IndySkate preserves Indianapolis skateboarding history and documents the scene that exists now.
-        The site is intentionally simple: the archive, the people, the spots, and the media should carry the weight.
+        The goal is simple: keep the real stuff from disappearing.
       </p>
     </section>
   </main>
