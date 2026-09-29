@@ -16,6 +16,13 @@ function recordLabel(record) {
   return parts.join(" / ") || record.title || "Untitled archive item";
 }
 
+function renderRecordCount() {
+  const target = document.querySelector("#record-count");
+  if (!target) return;
+  const verifiedCount = state.records.filter((record) => record.verified === true).length;
+  target.textContent = `${verifiedCount} VERIFIED ${verifiedCount === 1 ? "RECORD" : "RECORDS"}`;
+}
+
 function renderFeatured() {
   const target = document.querySelector("#featured-content");
   const record = [...state.records]
@@ -67,6 +74,7 @@ async function loadArchive() {
     if (!response.ok) throw new Error(`Archive request failed: ${response.status}`);
     const payload = await response.json();
     state.records = Array.isArray(payload.records) ? payload.records : [];
+    renderRecordCount();
     renderFeatured();
     renderYears();
     renderCollection("photo", "#photos-list");
