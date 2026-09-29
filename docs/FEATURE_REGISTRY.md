@@ -16,7 +16,7 @@
 | Indianapolis spots | PLANNED | Historical + current spot information |
 | Wayback recovery | PLANNED | Recover old IndySkate pages/assets and document provenance |
 | Search | PLANNED | Archive-wide search after meaningful content volume exists |
-| Cloudflare Pages auto-deploy | CONNECTED | Public site is deploying from repository changes |
+| Cloudflare / production auto-deploy | BLOCKED ON SETUP | New build is merged, but indyskate.com is still serving the legacy site |
 | Cloudflare R2 media vault | FUTURE | For large originals and preservation assets |
 | Automated link/media QA | PLANNED | Extend GitHub validation workflow |
 
@@ -25,4 +25,5 @@
 - STARTED: foundation exists but is not feature-complete.
 - IN PROGRESS: actively being built/tested.
 - COMPLETE: current intended scope is implemented.
+- BLOCKED ON SETUP: implementation depends on account-side configuration.
 - FUTURE: intentionally deferred.
