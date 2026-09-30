@@ -1,4 +1,29 @@
 {
   "schema_version": 1,
-  "records": []
+  "records": [
+    {
+      "id": "archive-youtube-kotr-2005-louisville",
+      "type": "video",
+      "title": "King Of The Road 2005 Louisville KY",
+      "year": "2005",
+      "date_precision": "year",
+      "skaters": [],
+      "spot": null,
+      "location": "Louisville, KY",
+      "geography_scope": "regional-exception",
+      "description": "First-party Indyskate upload documenting King Of The Road 2005 in Louisville, Kentucky, featuring Habitat, Flip, Element and Zero teams.",
+      "embed_url": "https://www.youtube.com/embed/_CmU7RqA6CU",
+      "thumbnail_url": "https://i.ytimg.com/vi/_CmU7RqA6CU/hqdefault.jpg",
+      "credit": "Indyskate / YouTube",
+      "source": {
+        "class": "B",
+        "label": "Indyskate YouTube",
+        "url": "https://www.youtube.com/watch?v=_CmU7RqA6CU"
+      },
+      "rights_note": "Use supported YouTube embed/link. Do not rehost the video file unless first-party master rights are separately confirmed.",
+      "confidence": "high",
+      "verified": true,
+      "added_at": "2026-09-30"
+    }
+  ]
 }

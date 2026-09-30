@@ -170,10 +170,14 @@ function renderArchiveCollection(type, selector) {
   if (!items.length) return;
 
   target.classList.remove("muted");
-  target.innerHTML = '<div class="archive-grid">' + items.map((record) =>
-    '<article class="archive-item"><strong>' + escapeHtml(record.title || recordLabel(record)) +
-    '</strong><small>' + escapeHtml(recordLabel(record)) + '</small></article>'
-  ).join("") + '</div>';
+  target.innerHTML = '<div class="archive-grid">' + items.map((record) => {
+    const sourceUrl = record.source && record.source.url ? safeUrl(record.source.url) : "#";
+    const sourceLink = sourceUrl !== "#"
+      ? '<a class="meta-link" href="' + escapeHtml(sourceUrl) + '" target="_blank" rel="noopener">WATCH / SOURCE ↗</a>'
+      : "";
+    return '<article class="archive-item"><strong>' + escapeHtml(record.title || recordLabel(record)) +
+      '</strong><small>' + escapeHtml(recordLabel(record)) + '</small>' + sourceLink + '</article>';
+  }).join("") + '</div>';
 }
 
 function renderFeatured() {
@@ -186,15 +190,23 @@ function renderFeatured() {
 
   if (!record) return;
 
-  const media = record.type === "photo" && record.asset
-    ? '<img src="' + escapeHtml(record.asset) + '" alt="' + escapeHtml(record.alt || recordLabel(record)) + '">'
-    : '';
+  let media = "";
+  const sourceUrl = record.source && record.source.url ? safeUrl(record.source.url) : "#";
+  if (record.type === "photo" && record.asset) {
+    media = '<img src="' + escapeHtml(record.asset) + '" alt="' + escapeHtml(record.alt || recordLabel(record)) + '">';
+  } else if (record.type === "video" && record.thumbnail_url) {
+    const image = '<img src="' + escapeHtml(record.thumbnail_url) + '" alt="' + escapeHtml(record.title || recordLabel(record)) + '">';
+    media = sourceUrl !== "#" ? '<a href="' + escapeHtml(sourceUrl) + '" target="_blank" rel="noopener">' + image + '</a>' : image;
+  }
+
+  const source = sourceUrl !== "#"
+    ? '<a class="meta-link" href="' + escapeHtml(sourceUrl) + '" target="_blank" rel="noopener">WATCH / SOURCE ↗</a>'
+    : escapeHtml(record.credit || (record.source && record.source.label) || "SOURCE RECORDED");
 
   target.innerHTML =
     '<article class="feature-card"><figure>' + media + '</figure>' +
-    '<div class="feature-meta"><span>' + escapeHtml(recordLabel(record)) + '</span><span>' +
-    escapeHtml(record.credit || (record.source && record.source.label) || "SOURCE RECORDED") +
-    '</span></div></article>';
+    '<div class="feature-meta"><span><strong>' + escapeHtml(record.title || recordLabel(record)) + '</strong><br>' +
+    escapeHtml(recordLabel(record)) + '</span><span>' + source + '</span></div></article>';
 }
 
 function bindFilters() {

@@ -7,6 +7,7 @@ const requiredFiles = [
   "public/styles.css",
   "public/app.js",
   "public/data/archive.json",
+  "public/data/archive_candidates.json",
   "public/data/feed.json",
   "public/data/events.json",
   "public/data/places.json",
@@ -61,6 +62,7 @@ function validateWebUrl(value, label) {
 }
 
 const archive = await loadJson("public/data/archive.json");
+const archiveCandidates = await loadJson("public/data/archive_candidates.json");
 const feed = await loadJson("public/data/feed.json");
 const events = await loadJson("public/data/events.json");
 const places = await loadJson("public/data/places.json");
@@ -69,6 +71,7 @@ const collections = await loadJson("public/data/collections.json");
 const sources = await loadJson("public/data/sources.json");
 
 const records = Array.isArray(archive.records) ? archive.records : [];
+const candidates = Array.isArray(archiveCandidates.candidates) ? archiveCandidates.candidates : [];
 const feedItems = Array.isArray(feed.items) ? feed.items : [];
 const eventItems = Array.isArray(events.events) ? events.events : [];
 const placeItems = Array.isArray(places.places) ? places.places : [];
@@ -77,6 +80,7 @@ const collectionItems = Array.isArray(collections.collections) ? collections.col
 const sourceItems = Array.isArray(sources.sources) ? sources.sources : [];
 
 if (!Array.isArray(archive.records)) failures.push("archive.json: records must be an array");
+if (!Array.isArray(archiveCandidates.candidates)) failures.push("archive_candidates.json: candidates must be an array");
 if (!Array.isArray(feed.items)) failures.push("feed.json: items must be an array");
 if (!Array.isArray(events.events)) failures.push("events.json: events must be an array");
 if (!Array.isArray(places.places)) failures.push("places.json: places must be an array");
@@ -85,6 +89,7 @@ if (!Array.isArray(collections.collections)) failures.push("collections.json: co
 if (!Array.isArray(sources.sources)) failures.push("sources.json: sources must be an array");
 
 requireUniqueIds(records, "archive");
+requireUniqueIds(candidates, "archive candidates");
 requireUniqueIds(feedItems, "feed");
 requireUniqueIds(eventItems, "events");
 requireUniqueIds(placeItems, "places");
@@ -102,8 +107,20 @@ for (const [index, source] of sourceItems.entries()) {
 
 for (const [index, record] of records.entries()) {
   if (!record.type) failures.push("archive.json record " + index + ": missing type");
+  if (!record.title) failures.push("archive.json record " + index + ": missing title");
   if (record.verified !== true) failures.push("archive.json record " + index + ": published records must set verified=true");
   if (!record.source || !record.source.label) failures.push("archive.json record " + index + ": missing source.label");
+  if (record.source && record.source.url) validateWebUrl(record.source.url, "archive.json record " + index + " source");
+  if (record.type === "video" && !record.source?.url) failures.push("archive.json record " + index + ": published video needs source.url");
+}
+
+for (const [index, candidate] of candidates.entries()) {
+  if (!candidate.type) failures.push("archive_candidates.json record " + index + ": missing type");
+  if (!candidate.title) failures.push("archive_candidates.json record " + index + ": missing title");
+  if (!candidate.source_ref) failures.push("archive_candidates.json record " + index + ": missing source_ref");
+  if (!candidate.confidence) failures.push("archive_candidates.json record " + index + ": missing confidence");
+  if (!candidate.publication_status) failures.push("archive_candidates.json record " + index + ": missing publication_status");
+  if (candidate.source_url) validateWebUrl(candidate.source_url, "archive_candidates.json record " + index);
 }
 
 for (const [index, item] of feedItems.entries()) {
