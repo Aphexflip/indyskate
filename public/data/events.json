@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "events": [
+    {
+      "id": "event-q-skate-league-2026-10-24",
+      "title": "Q Skate League",
+      "date": "2026-10-24",
+      "status": "upcoming",
+      "venue": "Q Skatepark",
+      "place_id": "place-q-skatepark",
+      "city": "Indianapolis, IN",
+      "summary": "Practice begins at noon and the event starts at 12:30 PM. Q lists divisions for 12 & under, 13–15, and girls 17 & under; participant entry is $10 and spectators are free.",
+      "source_id": "source-q-skatepark",
+      "source_url": "https://www.qskatepark.com/skate-league",
+      "verified": true
+    }
+  ]
+}
