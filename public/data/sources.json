@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "source-q-skatepark",
+      "name": "Q Skatepark",
+      "kind": "official venue / event source",
+      "url": "https://www.qskatepark.com/",
+      "geography": "Indianapolis, IN",
+      "ingest": "manual-now / automation-candidate",
+      "verified_at": "2026-09-30",
+      "verified": true
+    },
+    {
+      "id": "source-indy-parks-willard",
+      "name": "Indy Parks — Willard Park",
+      "kind": "official government park source",
+      "url": "https://parks.indy.gov/parks/willard-park/",
+      "geography": "Indianapolis, IN",
+      "ingest": "manual",
+      "verified_at": "2026-09-30",
+      "verified": true
+    },
+    {
+      "id": "source-indy-parks-arsenal",
+      "name": "Indy Parks — Arsenal Park",
+      "kind": "official government park source",
+      "url": "https://parks.indy.gov/parks/arsenal-park-2/",
+      "geography": "Indianapolis, IN",
+      "ingest": "manual",
+      "verified_at": "2026-09-30",
+      "verified": true
+    },
+    {
+      "id": "source-visit-indy-major-taylor",
+      "name": "Visit Indy — Major Taylor Skate Park",
+      "kind": "official tourism directory",
+      "url": "https://www.visitindy.com/directory/major-taylor-skate-park/",
+      "geography": "Indianapolis, IN",
+      "ingest": "manual",
+      "verified_at": "2026-09-30",
+      "verified": true
+    },
+    {
+      "id": "source-indy-skatepark-advocates",
+      "name": "Indianapolis Skatepark Advocates",
+      "kind": "local skate advocacy organization",
+      "url": "https://indyskateparks.org/",
+      "geography": "Indianapolis, IN",
+      "ingest": "manual / monitoring-candidate",
+      "verified_at": "2026-09-30",
+      "verified": true
+    }
+  ]
+}
