@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "feed-q-skate-league-2026-10-24",
+      "kind": "event",
+      "title": "Q Skate League — October 24",
+      "summary": "Q Skatepark lists its next quarterly youth Skate League event for October 24, 2026, with street, park/transition, mini-ramp and best-trick competition.",
+      "date": "2026-10-24",
+      "sort_date": "2026-10-24",
+      "location": "Indianapolis, IN",
+      "source_id": "source-q-skatepark",
+      "source_url": "https://www.qskatepark.com/skate-league",
+      "verified": true,
+      "published": true
+    },
+    {
+      "id": "feed-willard-park",
+      "kind": "place",
+      "title": "Willard Park Skatepark",
+      "summary": "Indy Parks lists Willard Park's skatepark with a flow bowl, ramps and rails. The park is at 1901 E Washington St and is open dawn to dusk.",
+      "date": "2026-09-30",
+      "sort_date": "2026-09-30",
+      "location": "Indianapolis, IN",
+      "source_id": "source-indy-parks-willard",
+      "source_url": "https://parks.indy.gov/parks/willard-park/",
+      "verified": true,
+      "published": true
+    },
+    {
+      "id": "feed-q-skatepark-current",
+      "kind": "place",
+      "title": "Q Skatepark & Skateboard Shop",
+      "summary": "Q's official site lists the indoor park and shop at 1727 Stout Field East Drive, with current 2026 park/shop hours and weekly group skate lessons.",
+      "date": "2026-09-30",
+      "sort_date": "2026-09-30",
+      "location": "Indianapolis, IN",
+      "source_id": "source-q-skatepark",
+      "source_url": "https://www.qskatepark.com/",
+      "verified": true,
+      "published": true
+    },
+    {
+      "id": "feed-arsenal-park",
+      "kind": "place",
+      "title": "Arsenal Park Skate Park",
+      "summary": "Indy Parks lists a skate park at Arsenal Park, 1400 E 46th St, with no entrance fee and dawn-to-dusk park hours.",
+      "date": "2026-09-30",
+      "sort_date": "2026-09-30",
+      "location": "Indianapolis, IN",
+      "source_id": "source-indy-parks-arsenal",
+      "source_url": "https://parks.indy.gov/parks/arsenal-park-2/",
+      "verified": true,
+      "published": true
+    }
+  ]
+}
