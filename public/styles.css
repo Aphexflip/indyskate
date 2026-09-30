@@ -59,6 +59,9 @@ nav a:hover,nav a:focus-visible{color:#fff}
 .feed-item:first-child{border-top:0}
 .feed-kicker{color:#77736d;font-size:.62rem;letter-spacing:.08em}
 .feed-kicker strong{display:block;color:var(--warm);margin-bottom:5px}
+.feed-thumb{display:block;width:min(100%,520px);aspect-ratio:16/9;margin:0 0 14px;border:1px solid var(--rule);overflow:hidden;background:#111}
+.feed-thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .18s ease,opacity .18s ease}
+.feed-thumb:hover img{transform:scale(1.012);opacity:.92}
 .feed-copy h3{margin:0;font-size:clamp(1.25rem,2.5vw,2rem);line-height:1;letter-spacing:-.04em;font-weight:500}
 .feed-copy p{margin:10px 0 0;max-width:720px;color:#9c9890;font-size:.82rem;line-height:1.55}
 .feed-source{text-align:right;font-size:.66rem;color:#8f8b84}
