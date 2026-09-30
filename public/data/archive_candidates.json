@@ -150,42 +150,6 @@
       "notes": "Live Indyskate upload. The description identifies the June 21, 2005 Free Love Park Rally. Keep indexed but do not surface in the Indiana-focused archive unless the geography policy expands."
     },
     {
-      "id": "candidate-youtube-2007-indianapolis-8mm",
-      "type": "video",
-      "title": "2007_Indianapolis_Skateboarding_8mm_Final",
-      "source_class": "B",
-      "source_ref": "Indyskate YouTube",
-      "source_url": "https://www.youtube.com/watch?v=0LD60MT7FCg",
-      "source_date": "2007",
-      "date_precision": "year-from-title",
-      "people": [],
-      "place": "Indianapolis, IN",
-      "confidence": "first-party-channel-index",
-      "publication_status": "verify-video-page-metadata",
-      "channel_index_views": "345",
-      "channel_index_upload_age": "1y ago",
-      "notes": "Exact title and URL collected from the public Indyskate Videos tab. Historical year and Indianapolis location are explicit in the title; verify video-page metadata before promotion."
-    },
-    {
-      "id": "candidate-youtube-erik-2006-indianapolis",
-      "type": "video",
-      "title": "Fakie Bigger Flip / Random Skating - 2006 Indianapolis - Erik Erling",
-      "source_class": "B",
-      "source_ref": "Indyskate YouTube",
-      "source_url": "https://www.youtube.com/watch?v=tSS4UcJrt0g",
-      "source_date": "2006",
-      "date_precision": "year-from-title",
-      "people": [
-        "Erik Erling"
-      ],
-      "place": "Indianapolis, IN",
-      "confidence": "first-party-channel-index",
-      "publication_status": "verify-video-page-metadata",
-      "channel_index_views": "130",
-      "channel_index_upload_age": "5y ago",
-      "notes": "Exact title and URL collected from the public Indyskate Videos tab. Year, Indianapolis and Erik Erling are explicit in the first-party title."
-    },
-    {
       "id": "candidate-youtube-gas-station-clip",
       "type": "video",
       "title": "Gas Station Clip",
@@ -371,64 +335,6 @@
       "notes": "First-party channel item; verify location and historical date."
     },
     {
-      "id": "candidate-youtube-super-old-major-taylor",
-      "type": "video",
-      "title": "Indyskate - Super Old Major Taylor Footage",
-      "source_class": "B",
-      "source_ref": "Indyskate YouTube",
-      "source_url": "https://www.youtube.com/watch?v=jY2hg3P2iJs",
-      "source_date": null,
-      "date_precision": "unknown",
-      "people": [],
-      "place_hint": "Major Taylor",
-      "confidence": "first-party-channel-index",
-      "publication_status": "verify-video-page-metadata",
-      "channel_index_views": "944",
-      "channel_index_upload_age": "11y ago",
-      "notes": "High-value Indianapolis history candidate. 'Major Taylor' is explicit in the title; verify footage date and people before promotion."
-    },
-    {
-      "id": "candidate-youtube-raw-tape-4-canal-arsenal-scotty",
-      "type": "video",
-      "title": "Indyskate Video | Raw | Tape 4 - Canal - Skating Arsenal - Scotty",
-      "source_class": "B",
-      "source_ref": "Indyskate YouTube",
-      "source_url": "https://www.youtube.com/watch?v=gBx18Vph-KY",
-      "source_date": null,
-      "date_precision": "unknown",
-      "people_as_titled": [
-        "Scotty"
-      ],
-      "place_hints": [
-        "Canal",
-        "Arsenal"
-      ],
-      "collection_hint": "Raw Tape 4",
-      "confidence": "first-party-channel-index",
-      "publication_status": "resolve-person-places-date",
-      "channel_index_views": "725",
-      "channel_index_upload_age": "11y ago",
-      "notes": "High-value raw Indianapolis archive footage. Keep title place/person wording exact until matched to canonical people/place records."
-    },
-    {
-      "id": "candidate-youtube-raw-tape-3-vx2000-uv",
-      "type": "video",
-      "title": "Indyskate Video | Raw | Tape 3 - 1st time with the VX2000 at UV - Ollies and Dicking around",
-      "source_class": "B",
-      "source_ref": "Indyskate YouTube",
-      "source_url": "https://www.youtube.com/watch?v=q03cPzaj3bQ",
-      "source_date": null,
-      "date_precision": "unknown",
-      "people": [],
-      "place_hint": "UV",
-      "collection_hint": "Raw Tape 3",
-      "confidence": "first-party-channel-index",
-      "publication_status": "resolve-place-date-people",
-      "channel_index_views": "234",
-      "channel_index_upload_age": "11y ago",
-      "notes": "First-party raw archive candidate. Do not expand UV beyond the title until the video/context is cross-checked, even though another verified UV video describes Ultra Violet Skatepark."
-    },
-    {
       "id": "candidate-youtube-uv-part-9-joey",
       "type": "video",
       "title": "Joey - UV Video - Part 9",
@@ -448,5 +354,5 @@
       "notes": "Keep the person exactly as titled until a full identity is corroborated."
     }
   ],
-  "batch_note": "Batch 1 now contains 25 archive candidates. Channel noise/non-scene uploads were intentionally excluded."
+  "batch_note": "Batch 1 began with 25 candidates; 5 high-confidence first-party videos were promoted on 2026-09-30. Remaining candidates stay staged until verified."
 }
