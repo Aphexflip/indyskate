@@ -1,6 +1,6 @@
 # IndySkate Content Sources
 
-This file tracks where archive material came from and whether it is safe to publish.
+This file tracks where archive and current-scene material came from and whether it is safe to publish.
 
 ## Source classes
 
@@ -19,24 +19,23 @@ Material submitted by a skater, filmer, photographer, shop, or community member.
 ### E — Research-only reference
 Material useful for identifying dates, people, spots, or context but not cleared for republication. Do not copy/rehost the media merely because it is publicly visible online.
 
-## Required record fields
-Each published archive record should have, when knowable:
-- stable ID
-- type
-- title/caption
-- year or date
-- skater(s)
-- filmer/photographer/creator
-- spot/location
-- source class
-- source label
-- source URL or archive reference
-- asset/embed reference
-- rights/publication note
-- verification state
-- added date
+### F — Official current-scene source
+Official park, shop, venue, event organizer, government page, tourism directory, creator channel, or organization used to verify current events/places/scene information.
 
-Unknown fields may be `null`. Never infer them solely to make the archive look complete.
+## Publication rules
+- Historical media requires provenance and a rights/publication note when knowable.
+- Current feed items require a recorded source URL and verification state.
+- Do not rehost third-party media just because it is public; prefer supported embeds/links.
+- Unknown fields may be `null`; never infer them solely to make the site look complete.
 
-## Current imported sources
-None yet in the new repository build.
+## Current source registry
+Structured source records live in `public/data/sources.json`.
+
+Initial verified V1 sources:
+- Q Skatepark — official venue/event source
+- Indy Parks — Willard Park
+- Indy Parks — Arsenal Park
+- Visit Indy — Major Taylor Skate Park
+- Indianapolis Skatepark Advocates
+
+These are seed sources, not a complete Indiana skate source list. Future automation should expand the registry carefully and preserve editorial control.
