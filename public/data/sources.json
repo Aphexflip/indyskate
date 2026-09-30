@@ -2,6 +2,56 @@
   "schema_version": 1,
   "sources": [
     {
+      "id": "source-indyskate-youtube",
+      "name": "Indyskate YouTube",
+      "kind": "first-party historical video channel",
+      "url": "https://www.youtube.com/@Indyskate",
+      "geography": "Indianapolis, IN",
+      "ingest": "highest-priority archive source / automation-candidate",
+      "verified_at": "2026-09-30",
+      "verified": true
+    },
+    {
+      "id": "source-indyskate-wayback",
+      "name": "IndySkate.com — Wayback archive",
+      "kind": "archived first-party website",
+      "url": "https://web.archive.org/web/*/http://indyskate.com/",
+      "geography": "Indianapolis, IN",
+      "ingest": "archive recovery / metadata reconstruction",
+      "verified_at": "2026-09-30",
+      "verified": true
+    },
+    {
+      "id": "source-indyskate-blogger",
+      "name": "IndySkate Blogger archive",
+      "kind": "historical first-party site",
+      "url": "https://indyskate.blogspot.com/",
+      "geography": "Indianapolis, IN",
+      "ingest": "archive recovery / post-media cross-reference",
+      "verified_at": "2026-09-30",
+      "verified": true
+    },
+    {
+      "id": "source-indyskate-flickr",
+      "name": "Erik Erling / Indy skate Flickr",
+      "kind": "first-party photo archive",
+      "url": "https://www.flickr.com/photos/aphexflip/",
+      "geography": "Indianapolis, IN",
+      "ingest": "high-priority archive photo source",
+      "verified_at": "2026-09-30",
+      "verified": true
+    },
+    {
+      "id": "source-findskatespots-indyskate",
+      "name": "FindSkateSpots — IndySkate references",
+      "kind": "research-only external cross-reference",
+      "url": "https://findskatespots.com/",
+      "geography": "Indianapolis, IN",
+      "ingest": "research-only / spot-video cross-reference",
+      "verified_at": "2026-09-30",
+      "verified": true
+    },
+    {
       "id": "source-q-skatepark",
       "name": "Q Skatepark",
       "kind": "official venue / event source",

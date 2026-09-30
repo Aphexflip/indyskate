@@ -9,7 +9,7 @@ IndySkate is **50/50 living scene + permanent archive**. Indianapolis is the cen
 The product should feel like a serious independent skate publication/archive, not a generic SaaS dashboard. The homepage must feel alive. Archive depth grows underneath it.
 
 ## Locked V1
-The current build target is:
+The current foundation includes:
 1. scrolling Indiana skate feed;
 2. upcoming events;
 3. source registry;
@@ -17,6 +17,19 @@ The current build target is:
 5. relational foundations for people, media/archive records, sources, events and projects/collections.
 
 Do not replace this with another homepage redesign or framework rewrite.
+
+## Archive source priority
+**Online-first. Do not block archive work on physical tape inventory.**
+
+Priority:
+1. first-party Indyskate YouTube;
+2. recovered/Wayback IndySkate.com;
+3. IndySkate Blogger;
+4. Erik Erling / Indy skate Flickr;
+5. useful public web cross-references;
+6. local hard-drive originals when online copies are missing/inferior or a better master is needed.
+
+Reuse previously recovered inventories and web archaeology. Do not make Erik re-catalog material that is already online and identifiable.
 
 ## Historical integrity
 - Never invent historical photos, videos, skaters, photographers, spots, dates, captions, quotes, events or metadata.
@@ -46,7 +59,7 @@ Social/community is a core long-term goal: submissions, comments/reactions, corr
 - Keep content data-driven and separate from presentation.
 - Current JSON files under `public/data/` are the V1 source of truth.
 - Large original media should move to object storage such as Cloudflare R2 later; metadata remains durable/version-controlled.
-- Erik's 50+ tapes should get permanent IDs such as `TAPE-0001` before large-scale digitization.
+- Hard-drive originals are preservation/master sources, not a prerequisite for online archive publishing.
 
 ## Workflow
 1. Read `docs/PROJECT_STATE.md`, `docs/FEATURE_REGISTRY.md`, `docs/DESIGN.md`, and this file.
