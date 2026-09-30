@@ -2,28 +2,37 @@
 
 | Feature | Status | Notes |
 |---|---|---|
-| Minimal homepage shell | COMPLETE | Archive-first editorial homepage with intentional recovery state |
-| Responsive mobile layout | COMPLETE | Mobile-first responsive layout in current cleanup |
-| Archive recovery explainer | COMPLETE | Makes the empty state deliberate and transparent |
-| Community archive submission CTA | STARTED | Email-based submission path added; structured form can come later |
-| Verified record counter | COMPLETE | Count is derived from verified records in archive data |
-| Data-driven archive records | IN PROGRESS | Empty verified dataset wired into UI |
-| Archive year browsing | STARTED | Renders years once records exist |
+| Living Indiana skate homepage | IN PROGRESS | V1 branch adds source-backed scrolling feed and scene status |
+| Current-scene feed | IN PROGRESS | Data-driven feed with filters for events, places, archive and video |
+| Upcoming events | IN PROGRESS | Verified event dataset and homepage cards |
+| Source Registry | IN PROGRESS | Trusted-source dataset supports current feed provenance and future automation |
+| Indianapolis / Indiana places | IN PROGRESS | Verified park/place records; map is later |
+| Minimal editorial design | COMPLETE | Media-led, restrained visual system preserved |
+| Responsive mobile layout | COMPLETE | V1 feed, cards and archive collapse cleanly on mobile |
+| Archive recovery explainer | COMPLETE | Archive remains explicit about source/provenance |
+| Community submission CTA | STARTED | Email-based path remains; structured/social submissions later |
+| Verified record counter | COMPLETE | Count derives from verified archive records |
+| Data-driven archive records | IN PROGRESS | Existing archive JSON remains canonical historical record feed |
+| Archive year browsing | STARTED | Renders once verified records exist |
 | Photo archive | STARTED | Renders verified photo records once imported |
 | Video archive | PLANNED | Support verified in-site embeds where permitted |
 | Zines / print media | PLANNED | Source-backed scans and metadata |
-| Skater pages | PLANNED | Derived from verified records/submissions |
-| Indianapolis spots | PLANNED | Historical + current spot information |
+| Skater / people profiles | FOUNDATION | people.json added; remains empty until real verified people are ingested |
+| Projects / collections | FOUNDATION | collections.json added for videos, crews, site eras and tape collections |
+| Indiana skate map | PLANNED | Indianapolis first; expand to Indiana and limited notable regional destinations |
+| Erik tape archive | PLANNED | 50+ tapes from roughly 1999–2009 require stable inventory IDs before publication |
 | Wayback recovery | PLANNED | Recover old IndySkate pages/assets and document provenance |
-| Search | PLANNED | Archive-wide search after meaningful content volume exists |
-| Cloudflare / production auto-deploy | BLOCKED ON SETUP | New build is merged, but indyskate.com is still serving the legacy site |
-| Cloudflare R2 media vault | FUTURE | For large originals and preservation assets |
-| Automated link/media QA | PLANNED | Extend GitHub validation workflow |
+| Search | PLANNED | Add after meaningful content volume exists |
+| Social V0 | PLANNED | Submissions, comments/reactions, corrections/identification |
+| Cloudflare production auto-deploy | COMPLETE | indyskate.com is live on Cloudflare Workers and current GitHub build |
+| Cloudflare R2 media vault | FUTURE | Large originals and preservation masters |
+| Monetization | FUTURE | Merch/zines/prints/sponsors/events/supporters after product earns usage |
+| Automated current-source discovery | PLANNED | Source Registry is foundation; ingest candidates with editorial control |
 
 ## Status meanings
 - PLANNED: agreed direction, not implemented.
+- FOUNDATION: schema/data layer exists but end-user feature is not built.
 - STARTED: foundation exists but is not feature-complete.
 - IN PROGRESS: actively being built/tested.
 - COMPLETE: current intended scope is implemented.
-- BLOCKED ON SETUP: implementation depends on account-side configuration.
 - FUTURE: intentionally deferred.
