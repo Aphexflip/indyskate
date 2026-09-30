@@ -57,7 +57,10 @@
       "source_url": "https://indyskate.blogspot.com/2012/04/front-crook-front-air.html",
       "source_date": "2012-04-25",
       "date_precision": "day",
-      "people": ["Franklin Luna", "Terelle Young"],
+      "people": [
+        "Franklin Luna",
+        "Terelle Young"
+      ],
       "place": null,
       "confidence": "first-party-public",
       "publication_status": "verify-media-and-place",
@@ -72,7 +75,9 @@
       "source_url": "https://indyskate.blogspot.com/2012/04/tj-rains-ollie-to-fakie-kickflip-to.html",
       "source_date": "2012-04-11",
       "date_precision": "day",
-      "people": ["T.J. Rains"],
+      "people": [
+        "T.J. Rains"
+      ],
       "place": null,
       "confidence": "first-party-public",
       "publication_status": "verify-media-and-place",
@@ -87,7 +92,9 @@
       "source_url": "https://indyskate.blogspot.com/2011/09/jordan-monster-kickflip-back-360.html",
       "source_date": "2011-09-19",
       "date_precision": "day",
-      "people": ["Jordan"],
+      "people": [
+        "Jordan"
+      ],
       "place": null,
       "confidence": "first-party-public",
       "publication_status": "resolve-person-and-media",
@@ -102,7 +109,9 @@
       "source_url": "https://indyskate.blogspot.com/2011/09/jordan-mt-hradflip-kickflip.html",
       "source_date": "2011-09-17",
       "date_precision": "day",
-      "people": ["Jordan"],
+      "people": [
+        "Jordan"
+      ],
       "place": null,
       "place_hint": "MT",
       "confidence": "first-party-public",
@@ -139,6 +148,305 @@
       "confidence": "first-party-public",
       "publication_status": "defer-geography",
       "notes": "Live Indyskate upload. The description identifies the June 21, 2005 Free Love Park Rally. Keep indexed but do not surface in the Indiana-focused archive unless the geography policy expands."
+    },
+    {
+      "id": "candidate-youtube-2007-indianapolis-8mm",
+      "type": "video",
+      "title": "2007_Indianapolis_Skateboarding_8mm_Final",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=0LD60MT7FCg",
+      "source_date": "2007",
+      "date_precision": "year-from-title",
+      "people": [],
+      "place": "Indianapolis, IN",
+      "confidence": "first-party-channel-index",
+      "publication_status": "verify-video-page-metadata",
+      "channel_index_views": "345",
+      "channel_index_upload_age": "1y ago",
+      "notes": "Exact title and URL collected from the public Indyskate Videos tab. Historical year and Indianapolis location are explicit in the title; verify video-page metadata before promotion."
+    },
+    {
+      "id": "candidate-youtube-erik-2006-indianapolis",
+      "type": "video",
+      "title": "Fakie Bigger Flip / Random Skating - 2006 Indianapolis - Erik Erling",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=tSS4UcJrt0g",
+      "source_date": "2006",
+      "date_precision": "year-from-title",
+      "people": [
+        "Erik Erling"
+      ],
+      "place": "Indianapolis, IN",
+      "confidence": "first-party-channel-index",
+      "publication_status": "verify-video-page-metadata",
+      "channel_index_views": "130",
+      "channel_index_upload_age": "5y ago",
+      "notes": "Exact title and URL collected from the public Indyskate Videos tab. Year, Indianapolis and Erik Erling are explicit in the first-party title."
+    },
+    {
+      "id": "candidate-youtube-gas-station-clip",
+      "type": "video",
+      "title": "Gas Station Clip",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube + IndySkate Blogger",
+      "source_url": "https://www.youtube.com/watch?v=QHxJIYI-fPw",
+      "related_source_url": "https://indyskate.blogspot.com/2016/06/gas-station-clip.html",
+      "source_date": "2016-06-18",
+      "date_precision": "blog-post-date",
+      "people": [],
+      "place": null,
+      "confidence": "first-party-cross-linked",
+      "publication_status": "resolve-place-and-footage-date",
+      "channel_index_views": "209",
+      "channel_index_upload_age": "10y ago",
+      "notes": "YouTube page verified title 'Gas Station Clip' and description 'Gas Station Rail'. First-party Blogger has a post with the same title dated June 18, 2016. Treat 2016-06-18 as source/post date, not necessarily footage date."
+    },
+    {
+      "id": "candidate-youtube-uv-part-2-erik-david",
+      "type": "video",
+      "title": "Erik and David - UV Video - Part 2",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=LZ47oJl02bc",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people_as_titled": [
+        "Erik",
+        "David"
+      ],
+      "place": null,
+      "collection_hint": "UV Video",
+      "confidence": "first-party-public",
+      "publication_status": "resolve-people-date-collection",
+      "channel_index_views": "200",
+      "channel_index_upload_age": "10y ago",
+      "notes": "Direct YouTube page verified. Description explicitly says 'Ultra Violet Skatepark UV Video'. Do not assume full identity for David or historical date without corroboration."
+    },
+    {
+      "id": "candidate-youtube-uv-part-13-mike-stultz",
+      "type": "video",
+      "title": "Mike Stultz - UV Video - Part 13",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=H8tC-8p35JM",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people": [
+        "Mike Stultz"
+      ],
+      "collection_hint": "UV Video",
+      "confidence": "first-party-channel-index",
+      "publication_status": "verify-video-page-metadata",
+      "channel_index_views": "312",
+      "channel_index_upload_age": "10y ago",
+      "notes": "Exact first-party channel title and URL. Verify historical date/location before promotion."
+    },
+    {
+      "id": "candidate-youtube-uv-part-12-jevon",
+      "type": "video",
+      "title": "Jevon - UV Video - Part 12",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=FB_FhnukhUY",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people_as_titled": [
+        "Jevon"
+      ],
+      "collection_hint": "UV Video",
+      "confidence": "first-party-channel-index",
+      "publication_status": "resolve-person-and-date",
+      "channel_index_views": "923",
+      "channel_index_upload_age": "10y ago",
+      "notes": "Keep the person exactly as titled until a full identity is corroborated."
+    },
+    {
+      "id": "candidate-youtube-uv-part-11-zach-renner",
+      "type": "video",
+      "title": "Zach Renner - UV Video - Part 11",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=cSrBls32WAI",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people": [
+        "Zach Renner"
+      ],
+      "collection_hint": "UV Video",
+      "confidence": "first-party-channel-index",
+      "publication_status": "verify-video-page-metadata",
+      "channel_index_views": "229",
+      "channel_index_upload_age": "10y ago",
+      "notes": "Exact first-party channel title and URL. Verify historical date/location before promotion."
+    },
+    {
+      "id": "candidate-youtube-uv-part-8-friends",
+      "type": "video",
+      "title": "Friends - UV Video - Part 8",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=T21Tnng61N0",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people": [],
+      "collection_hint": "UV Video",
+      "confidence": "first-party-channel-index",
+      "publication_status": "identify-people-and-date",
+      "channel_index_views": "339",
+      "channel_index_upload_age": "10y ago",
+      "notes": "First-party channel item. Needs people/date identification before final archive promotion."
+    },
+    {
+      "id": "candidate-youtube-uv-part-3-devin",
+      "type": "video",
+      "title": "Devin - UV Video - Part 3",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=fgmoN1x3O7Y",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people_as_titled": [
+        "Devin"
+      ],
+      "collection_hint": "UV Video",
+      "confidence": "first-party-channel-index",
+      "publication_status": "resolve-person-and-date",
+      "channel_index_views": "323",
+      "channel_index_upload_age": "10y ago",
+      "notes": "Keep the person exactly as titled until a full identity is corroborated."
+    },
+    {
+      "id": "candidate-youtube-uv-part-1-intro",
+      "type": "video",
+      "title": "Intro - UV Video - Part 1",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=dPkpyHRVnc0",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people": [],
+      "collection_hint": "UV Video",
+      "confidence": "first-party-channel-index",
+      "publication_status": "verify-video-page-metadata",
+      "channel_index_views": "250",
+      "channel_index_upload_age": "10y ago",
+      "notes": "Likely useful as the collection entry point; verify description/date before promotion."
+    },
+    {
+      "id": "candidate-youtube-old-indyskate-montage",
+      "type": "video",
+      "title": "Old Indyskate Montage",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=m65wpVt3sXw",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people": [],
+      "place": null,
+      "confidence": "first-party-channel-index",
+      "publication_status": "verify-video-page-metadata",
+      "channel_index_views": "267",
+      "channel_index_upload_age": "10y ago",
+      "notes": "High-value first-party archive candidate. Recover description, people, spots and footage era."
+    },
+    {
+      "id": "candidate-youtube-zach-renner-front-shuv",
+      "type": "video",
+      "title": "Zach Renner - Front Shuv",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=Wa7rMknj1PQ",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people": [
+        "Zach Renner"
+      ],
+      "place": null,
+      "confidence": "first-party-channel-index",
+      "publication_status": "verify-video-page-metadata",
+      "channel_index_views": "64",
+      "channel_index_upload_age": "10y ago",
+      "notes": "First-party channel item; verify location and historical date."
+    },
+    {
+      "id": "candidate-youtube-super-old-major-taylor",
+      "type": "video",
+      "title": "Indyskate - Super Old Major Taylor Footage",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=jY2hg3P2iJs",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people": [],
+      "place_hint": "Major Taylor",
+      "confidence": "first-party-channel-index",
+      "publication_status": "verify-video-page-metadata",
+      "channel_index_views": "944",
+      "channel_index_upload_age": "11y ago",
+      "notes": "High-value Indianapolis history candidate. 'Major Taylor' is explicit in the title; verify footage date and people before promotion."
+    },
+    {
+      "id": "candidate-youtube-raw-tape-4-canal-arsenal-scotty",
+      "type": "video",
+      "title": "Indyskate Video | Raw | Tape 4 - Canal - Skating Arsenal - Scotty",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=gBx18Vph-KY",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people_as_titled": [
+        "Scotty"
+      ],
+      "place_hints": [
+        "Canal",
+        "Arsenal"
+      ],
+      "collection_hint": "Raw Tape 4",
+      "confidence": "first-party-channel-index",
+      "publication_status": "resolve-person-places-date",
+      "channel_index_views": "725",
+      "channel_index_upload_age": "11y ago",
+      "notes": "High-value raw Indianapolis archive footage. Keep title place/person wording exact until matched to canonical people/place records."
+    },
+    {
+      "id": "candidate-youtube-raw-tape-3-vx2000-uv",
+      "type": "video",
+      "title": "Indyskate Video | Raw | Tape 3 - 1st time with the VX2000 at UV - Ollies and Dicking around",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=q03cPzaj3bQ",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people": [],
+      "place_hint": "UV",
+      "collection_hint": "Raw Tape 3",
+      "confidence": "first-party-channel-index",
+      "publication_status": "resolve-place-date-people",
+      "channel_index_views": "234",
+      "channel_index_upload_age": "11y ago",
+      "notes": "First-party raw archive candidate. Do not expand UV beyond the title until the video/context is cross-checked, even though another verified UV video describes Ultra Violet Skatepark."
+    },
+    {
+      "id": "candidate-youtube-uv-part-9-joey",
+      "type": "video",
+      "title": "Joey - UV Video - Part 9",
+      "source_class": "B",
+      "source_ref": "Indyskate YouTube",
+      "source_url": "https://www.youtube.com/watch?v=pfhmmRRfvIA",
+      "source_date": null,
+      "date_precision": "unknown",
+      "people_as_titled": [
+        "Joey"
+      ],
+      "collection_hint": "UV Video",
+      "confidence": "first-party-channel-index",
+      "publication_status": "resolve-person-and-date",
+      "channel_index_views": "174",
+      "channel_index_upload_age": "10y ago",
+      "notes": "Keep the person exactly as titled until a full identity is corroborated."
     }
-  ]
+  ],
+  "batch_note": "Batch 1 now contains 25 archive candidates. Channel noise/non-scene uploads were intentionally excluded."
 }
