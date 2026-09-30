@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "places": [
+    {
+      "id": "place-q-skatepark",
+      "name": "Q Skatepark & Skateboard Shop",
+      "kind": "indoor skatepark / shop",
+      "city": "Indianapolis, IN",
+      "address": "1727 Stout Field East Drive, Indianapolis, IN 46241",
+      "status": "active",
+      "description": "Indoor skateboard park and shop with lessons, camps, Skate League and Skate Midwest programming.",
+      "source_id": "source-q-skatepark",
+      "source_url": "https://www.qskatepark.com/",
+      "verified": true
+    },
+    {
+      "id": "place-willard-park",
+      "name": "Willard Park Skatepark",
+      "kind": "public skatepark",
+      "city": "Indianapolis, IN",
+      "address": "1901 E Washington St, Indianapolis, IN 46201",
+      "status": "active",
+      "description": "Indy Parks describes a skatepark with a flow bowl, ramps and rails, built in honor of Ethan Williams.",
+      "source_id": "source-indy-parks-willard",
+      "source_url": "https://parks.indy.gov/parks/willard-park/",
+      "verified": true
+    },
+    {
+      "id": "place-arsenal-park",
+      "name": "Arsenal Park Skate Park",
+      "kind": "public skatepark",
+      "city": "Indianapolis, IN",
+      "address": "1400 E 46th St, Indianapolis, IN 46205",
+      "status": "active",
+      "description": "Public Indy Parks location with a skate park; the surrounding park is open dawn to dusk with no entrance fee.",
+      "source_id": "source-indy-parks-arsenal",
+      "source_url": "https://parks.indy.gov/parks/arsenal-park-2/",
+      "verified": true
+    },
+    {
+      "id": "place-major-taylor",
+      "name": "Major Taylor Skate Park",
+      "kind": "public skatepark",
+      "city": "Indianapolis, IN",
+      "address": "3649 Cold Spring Rd, Indianapolis, IN 46222",
+      "status": "active",
+      "description": "Skate park at the Lake Sullivan Sports Complex / Indy Cycloplex, managed by Indy Parks.",
+      "source_id": "source-visit-indy-major-taylor",
+      "source_url": "https://www.visitindy.com/directory/major-taylor-skate-park/",
+      "verified": true
+    }
+  ]
+}
