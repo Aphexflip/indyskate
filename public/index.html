@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="IndySkate — a source-backed archive of Indianapolis skateboarding history and the current scene.">
+  <meta name="description" content="IndySkate — the living Indiana skateboarding feed and source-backed Indianapolis archive.">
   <meta name="theme-color" content="#0b0b0b">
-  <meta property="og:title" content="IndySkate — Indianapolis Skateboarding Archive">
-  <meta property="og:description" content="Preserving Indianapolis skateboarding history with real, attributable photos, video, spots, zines, and stories.">
+  <meta property="og:title" content="IndySkate — Indiana Skateboarding Now + Then">
+  <meta property="og:description" content="Current Indiana skateboarding, events, spots, people, and a permanent source-backed Indianapolis archive.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://indyskate.com/">
-  <title>IndySkate — Indianapolis Skateboarding Archive</title>
+  <title>IndySkate — Indiana Skateboarding Now + Then</title>
   <link rel="canonical" href="https://indyskate.com/">
   <link rel="stylesheet" href="/styles.css">
 </head>
@@ -17,50 +17,90 @@
   <header class="site-header wrap">
     <a class="wordmark" href="#top" aria-label="IndySkate home">INDYSKATE</a>
     <nav aria-label="Primary navigation">
+      <a href="#feed">FEED</a>
+      <a href="#events">EVENTS</a>
       <a href="#archive">ARCHIVE</a>
+      <a href="#places">PLACES</a>
       <a href="#recover">SUBMIT</a>
-      <a href="#about">ABOUT</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">INDIANAPOLIS, INDIANA · SOURCE-BACKED ARCHIVE</p>
-        <h1 id="hero-title">INDY SKATEBOARDING.<br><span>PAST → PRESENT.</span></h1>
+        <p class="eyebrow">INDIANAPOLIS → INDIANA · CURRENT SCENE + PERMANENT ARCHIVE</p>
+        <h1 id="hero-title">INDIANA SKATEBOARDING.<br><span>NOW + THEN.</span></h1>
         <p class="hero-intro">
-          A permanent archive for Indianapolis skateboarding — photos, video, skaters, spots,
-          flyers, zines and stories. Real material only. Credited when known. Unknown when it isn't.
+          What is happening now, who is skating, where to go, what is coming up —
+          plus decades of Indianapolis footage, photos, spots, projects and history as the archive comes back online.
         </p>
         <div class="hero-actions">
-          <a class="cta primary" href="#archive">BROWSE ARCHIVE →</a>
-          <a class="cta" href="#recover">SUBMIT HISTORY ↗</a>
+          <a class="cta primary" href="#feed">SEE WHAT'S HAPPENING →</a>
+          <a class="cta" href="#archive">BROWSE THE ARCHIVE</a>
         </div>
       </div>
 
-      <aside class="archive-status" aria-label="Archive status">
-        <div class="status-head"><span>ARCHIVE STATUS</span><strong>REBUILDING</strong></div>
-        <div class="status-number" id="record-count">0 VERIFIED RECORDS</div>
-        <p>We are rebuilding the archive from real source material instead of filling the site with invented history.</p>
+      <aside class="scene-status" aria-label="IndySkate live status">
+        <div class="status-head"><span>INDY SKATE NETWORK</span><strong>LIVE</strong></div>
+        <div class="scene-stat"><b id="feed-count">0</b><span>LIVE FEED ITEMS</span></div>
+        <div class="scene-stat"><b id="event-count">0</b><span>UPCOMING EVENTS</span></div>
+        <div class="scene-stat"><b id="source-count">0</b><span>VERIFIED SOURCES</span></div>
+        <p>Only source-backed items get published. If we do not know something, we say so.</p>
       </aside>
     </section>
 
     <section class="status-strip">
       <div class="wrap status-strip-inner">
+        <span>INDIANA FIRST</span><i>•</i>
+        <span>CURRENT SCENE ACTIVE</span><i>•</i>
         <span>ARCHIVE RECOVERY ACTIVE</span><i>•</i>
-        <span>NO FAKE DATA</span><i>•</i>
-        <span>COMMUNITY SUBMISSIONS OPEN</span><i>•</i>
-        <span>INDIANAPOLIS, IN</span>
+        <span>50+ TAPES WAITING TO BE DIGITIZED</span><i>•</i>
+        <span>NO FAKE HISTORY</span>
+      </div>
+    </section>
+
+    <section id="feed" class="feed-shell wrap" aria-labelledby="feed-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">RIGHT NOW</p>
+          <h2 id="feed-title">INDIANA SKATE FEED</h2>
+        </div>
+        <p>Events, current places, new media and newly recovered archive material. The feed gets more useful as trusted Indiana sources are connected.</p>
+      </div>
+      <div class="feed-tools" aria-label="Feed filters">
+        <button class="filter is-active" type="button" data-filter="all">ALL</button>
+        <button class="filter" type="button" data-filter="event">EVENTS</button>
+        <button class="filter" type="button" data-filter="place">PLACES</button>
+        <button class="filter" type="button" data-filter="archive">ARCHIVE</button>
+        <button class="filter" type="button" data-filter="video">VIDEO</button>
+      </div>
+      <div id="feed-list" class="feed-list" aria-live="polite">
+        <div class="empty-row">Loading verified Indiana skate sources…</div>
+      </div>
+    </section>
+
+    <section id="events" class="events-shell wrap" aria-labelledby="events-title">
+      <div class="section-rule">
+        <h2 id="events-title">UPCOMING EVENTS</h2>
+        <span>INDIANA / REGIONAL</span>
+      </div>
+      <div id="events-list" class="event-list">
+        <div class="empty-row">No verified upcoming events loaded.</div>
       </div>
     </section>
 
     <section id="archive" class="archive-shell wrap" aria-labelledby="archive-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">BROWSE</p>
+          <p class="eyebrow">1999 → NOW</p>
           <h2 id="archive-title">THE ARCHIVE</h2>
         </div>
-        <p>Every record should tell you what it is, when it is from, who made it, where it came from, and how sure we are.</p>
+        <p>Every historical record should connect back to real source material: original tape/file, date or era, people, place, credit and confidence.</p>
+      </div>
+
+      <div class="archive-meta">
+        <span id="record-count">0 VERIFIED RECORDS</span>
+        <span>ERIK ARCHIVE: 50+ TAPES · ~1999–2009 · INVENTORY NEXT</span>
       </div>
 
       <div class="archive-dashboard">
@@ -81,30 +121,41 @@
           <div class="detail-body muted">Source-backed scans and print material will live here.</div>
         </details>
         <details>
-          <summary><span><b>05</b> SKATERS</span><span>+</span></summary>
-          <div class="detail-body muted">Skater pages will be built from verified archive records and submissions.</div>
+          <summary><span><b>05</b> SKATERS / PEOPLE</span><span>+</span></summary>
+          <div id="people-list" class="detail-body muted">Profiles are created only from verified scene/archive connections.</div>
         </details>
-        <details id="spots">
-          <summary><span><b>06</b> SPOTS</span><span>+</span></summary>
-          <div class="detail-body muted">Indianapolis spot history and current information will be added as it is verified.</div>
+        <details>
+          <summary><span><b>06</b> PROJECTS / CREWS</span><span>+</span></summary>
+          <div class="detail-body muted">Videos, crews, site eras and projects will become connected collections.</div>
         </details>
+      </div>
+    </section>
+
+    <section id="places" class="places-shell wrap" aria-labelledby="places-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SKATE INDIANA</p>
+          <h2 id="places-title">PLACES</h2>
+        </div>
+        <p>Indianapolis first, then surrounding Indiana towns and cities. Active parks, shops and selected historical spots belong here; a real map comes next.</p>
+      </div>
+      <div id="places-list" class="place-grid">
+        <div class="empty-row">Loading verified places…</div>
       </div>
     </section>
 
     <section class="featured wrap" aria-labelledby="featured-title">
       <div class="section-rule">
-        <h2 id="featured-title">LATEST VERIFIED ADDITION</h2>
+        <h2 id="featured-title">LATEST VERIFIED ARCHIVE ADDITION</h2>
         <span aria-hidden="true">→</span>
       </div>
       <div id="featured-content" class="featured-content" aria-live="polite">
         <div class="empty-feature">
           <div>
-            <p class="status">NOTHING VERIFIED YET</p>
-            <h3>The archive starts empty.</h3>
+            <p class="status">ARCHIVE INGESTION STARTS NEXT</p>
+            <h3>The old footage is real. The metadata comes first.</h3>
           </div>
-          <p>
-            That is intentional. The first item appears only when we have real source material worth preserving.
-          </p>
+          <p>Before clips from the 50+ tape collection go public, each tape gets a stable ID and source record so nothing gets detached from its history.</p>
         </div>
       </div>
     </section>
@@ -112,32 +163,33 @@
     <section id="recover" class="recovery wrap" aria-labelledby="recover-title">
       <div class="recovery-card">
         <div>
-          <p class="eyebrow">HELP BUILD THE RECORD</p>
-          <h2 id="recover-title">GOT OLD INDY SKATE STUFF?</h2>
-          <p class="recovery-lead">Photos, footage, flyers, zines, spot info, names, old site backups — send it in.</p>
+          <p class="eyebrow">ADD TO INDYSKATE</p>
+          <h2 id="recover-title">GOT SOMETHING INDIANA SHOULD SEE?</h2>
+          <p class="recovery-lead">Current clip, event, old footage, photo, flyer, spot correction or missing name — send it in. Social accounts and structured submissions come later.</p>
         </div>
         <div class="recovery-actions">
-          <a class="cta primary" href="mailto:aphexflip@hotmail.com?subject=IndySkate%20Archive%20Submission">SEND ARCHIVE MATERIAL →</a>
-          <p><strong>Useful context:</strong> approximate year, skater, filmer/photographer, spot, original source, and how you want to be credited.</p>
+          <a class="cta primary" href="mailto:aphexflip@hotmail.com?subject=IndySkate%20Submission">SUBMIT TO INDYSKATE →</a>
+          <p><strong>Useful context:</strong> date/era, skater, filmer/photographer, city/spot, original source, event link, and how you want to be credited.</p>
         </div>
       </div>
     </section>
 
     <section id="about" class="about wrap">
       <div class="section-rule">
-        <h2>ABOUT</h2>
-        <span>INDIANAPOLIS, IN</span>
+        <h2>WHAT THIS IS</h2>
+        <span>EST. FROM 20+ YEARS IN THE SCENE</span>
       </div>
       <p>
-        IndySkate preserves Indianapolis skateboarding history and documents the scene that exists now.
-        The goal is simple: keep the real stuff from disappearing.
+        IndySkate is a living Indiana skateboarding hub and a permanent Indianapolis archive.
+        Erik's own filming, skating, projects, photos and site history are part of the record —
+        alongside the people, places and work that made the scene what it is.
       </p>
     </section>
   </main>
 
   <footer class="site-footer wrap">
     <span>INDYSKATE.COM</span>
-    <span>ARCHIVE FIRST · SOURCE BACKED</span>
+    <span>INDIANA NOW · INDY HISTORY · SOURCE BACKED</span>
   </footer>
 
   <script src="/app.js" defer></script>
