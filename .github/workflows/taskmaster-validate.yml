@@ -1,0 +1,112 @@
+name: TASKMASTER Validate
+
+on:
+  push:
+    branches:
+      - "taskmaster/**"
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: taskmaster-validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    if: ${{ github.event_name != 'pull_request' || !startsWith(github.head_ref, 'taskmaster/') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Detect and run repository-native validation
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          check_javascript_syntax() {
+            FOUND_JS=0
+            for ext in js mjs cjs; do
+              while IFS= read -r -d '' file; do
+                FOUND_JS=1
+                node --check "$file"
+              done < <(find . -maxdepth 5 -type f -name "*.$ext" -not -path "./node_modules/*" -print0)
+            done
+
+            if [ "$FOUND_JS" = "0" ]; then
+              return 1
+            fi
+            return 0
+          }
+
+          if [ -f package.json ]; then
+            echo "TASKMASTER validator lane: package.json"
+
+            if [ -f package-lock.json ]; then
+              npm ci --no-audit --no-fund
+            else
+              NEEDS_INSTALL="$(node -e 'const p=require("./package.json"); const n=Object.keys({...p.dependencies,...p.devDependencies,...p.optionalDependencies}).length; process.stdout.write(n ? "yes" : "no")')"
+              if [ "$NEEDS_INSTALL" = "yes" ]; then
+                npm install --no-audit --no-fund
+              fi
+            fi
+
+            HAS_TEST="$(node -e 'const p=require("./package.json"); process.stdout.write(p.scripts?.test ? "yes" : "no")')"
+            HAS_CHECK="$(node -e 'const p=require("./package.json"); process.stdout.write(p.scripts?.check ? "yes" : "no")')"
+            HAS_BUILD="$(node -e 'const p=require("./package.json"); process.stdout.write(p.scripts?.build ? "yes" : "no")')"
+
+            if [ "$HAS_TEST" = "yes" ]; then
+              npm test
+            elif [ "$HAS_CHECK" = "yes" ]; then
+              npm run check
+            elif [ "$HAS_BUILD" = "yes" ]; then
+              npm run build
+            elif ! check_javascript_syntax; then
+              echo "::error::package.json has no test/check/build script and no JavaScript syntax targets were found."
+              exit 1
+            fi
+
+          elif [ -f build.sh ]; then
+            echo "TASKMASTER validator lane: build.sh"
+            bash build.sh
+
+          else
+            echo "TASKMASTER validator lane: plain static"
+
+            if [ ! -s index.html ]; then
+              echo "::error::No package.json, build.sh, or non-empty index.html validation contract was found."
+              exit 1
+            fi
+
+            check_javascript_syntax || true
+          fi
+
+      - name: Static-site sanity checks
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ ! -f index.html ]; then
+            echo "No top-level index.html; static-site sanity checks not applicable."
+            exit 0
+          fi
+
+          test -s index.html
+          grep -qi '<html' index.html
+          grep -qi '</html>' index.html
+
+          for asset in styles.css app.js; do
+            if grep -q "/$asset" index.html && [ ! -f "$asset" ]; then
+              echo "::error::index.html references missing local asset: $asset"
+              exit 1
+            fi
+          done
+
+          echo "Static sanity checks passed."
