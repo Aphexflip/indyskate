@@ -24,6 +24,132 @@
       "confidence": "high",
       "verified": true,
       "added_at": "2026-09-30"
+    },
+    {
+      "id": "archive-youtube-2007-indianapolis-8mm",
+      "type": "video",
+      "title": "2007_Indianapolis_Skateboarding_8mm_Final",
+      "year": "2007",
+      "date_precision": "year-explicit-in-first-party-source",
+      "skaters": [],
+      "spot": null,
+      "location": "Indianapolis, IN",
+      "description": "First-party Indyskate upload. YouTube title and description explicitly identify 8mm skateboarding in Indianapolis, Indiana in 2007.",
+      "embed_url": "https://www.youtube.com/embed/0LD60MT7FCg",
+      "thumbnail_url": "https://i.ytimg.com/vi/0LD60MT7FCg/maxresdefault.jpg",
+      "credit": "Indyskate / YouTube",
+      "source": {
+        "class": "B",
+        "label": "Indyskate YouTube",
+        "url": "https://www.youtube.com/watch?v=0LD60MT7FCg"
+      },
+      "rights_note": "Use supported YouTube embed/link. Do not rehost the video file unless first-party master rights are separately confirmed.",
+      "confidence": "high",
+      "verified": true,
+      "added_at": "2026-09-30"
+    },
+    {
+      "id": "archive-youtube-erik-2006-indianapolis",
+      "type": "video",
+      "title": "Fakie Bigger Flip / Random Skating - 2006 Indianapolis - Erik Erling",
+      "year": "2006",
+      "date_precision": "year-explicit-in-first-party-description",
+      "skaters": [
+        "Erik Erling"
+      ],
+      "spot": null,
+      "location": "Indianapolis, IN",
+      "description": "First-party Indyskate upload. The YouTube description states it was filmed in 2006 and shows Erik Erling doing a fakie bigger flip plus other random skating around Indianapolis, Indiana.",
+      "uploaded_at": "2021-08-21",
+      "embed_url": "https://www.youtube.com/embed/tSS4UcJrt0g",
+      "thumbnail_url": "https://i.ytimg.com/vi/tSS4UcJrt0g/hqdefault.jpg",
+      "credit": "Indyskate / YouTube",
+      "source": {
+        "class": "B",
+        "label": "Indyskate YouTube",
+        "url": "https://www.youtube.com/watch?v=tSS4UcJrt0g"
+      },
+      "rights_note": "Use supported YouTube embed/link. Do not rehost the video file unless first-party master rights are separately confirmed.",
+      "confidence": "high",
+      "verified": true,
+      "added_at": "2026-09-30"
+    },
+    {
+      "id": "archive-youtube-super-old-major-taylor",
+      "type": "video",
+      "title": "Indyskate - Super Old Major Taylor Footage",
+      "year": null,
+      "date_precision": "unknown",
+      "skaters": [],
+      "spot": "Major Taylor SkatePark",
+      "location": "Indianapolis, IN",
+      "description": "First-party Indyskate upload. The YouTube title identifies Major Taylor footage and the description says: 'Back in the day' at Major Taylor SkatePark. Exact footage date and people remain unknown.",
+      "embed_url": "https://www.youtube.com/embed/jY2hg3P2iJs",
+      "thumbnail_url": "https://i.ytimg.com/vi/jY2hg3P2iJs/hqdefault.jpg",
+      "credit": "Indyskate / YouTube",
+      "source": {
+        "class": "B",
+        "label": "Indyskate YouTube",
+        "url": "https://www.youtube.com/watch?v=jY2hg3P2iJs"
+      },
+      "rights_note": "Use supported YouTube embed/link. Do not rehost the video file unless first-party master rights are separately confirmed.",
+      "confidence": "high",
+      "verified": true,
+      "added_at": "2026-09-30"
+    },
+    {
+      "id": "archive-youtube-raw-tape-4",
+      "type": "video",
+      "title": "Indyskate Video | Raw | Tape 4 - Canal - Skating Arsenal - Scotty",
+      "year": null,
+      "date_precision": "unknown",
+      "skaters": [],
+      "people_as_titled": [
+        "Scotty"
+      ],
+      "spot": null,
+      "place_hints": [
+        "Canal",
+        "Arsenal"
+      ],
+      "location": "Indianapolis, IN",
+      "description": "First-party Indyskate upload. The YouTube description identifies released old skate footage in and around Indianapolis, Indiana; the title names Canal, Arsenal and Scotty. Exact date and full identity for Scotty remain unresolved.",
+      "embed_url": "https://www.youtube.com/embed/gBx18Vph-KY",
+      "thumbnail_url": "https://i.ytimg.com/vi/gBx18Vph-KY/hqdefault.jpg",
+      "credit": "Indyskate / YouTube",
+      "source": {
+        "class": "B",
+        "label": "Indyskate YouTube",
+        "url": "https://www.youtube.com/watch?v=gBx18Vph-KY"
+      },
+      "rights_note": "Use supported YouTube embed/link. Do not rehost the video file unless first-party master rights are separately confirmed.",
+      "confidence": "high",
+      "verified": true,
+      "added_at": "2026-09-30"
+    },
+    {
+      "id": "archive-youtube-raw-tape-3",
+      "type": "video",
+      "title": "Indyskate Video | Raw | Tape 3 - 1st time with the VX2000 at UV - Ollies and Dicking around",
+      "year": null,
+      "date_precision": "unknown",
+      "skaters": [],
+      "spot": null,
+      "place_hints": [
+        "UV"
+      ],
+      "location": null,
+      "description": "First-party Indyskate video verified on YouTube. The title identifies Raw Tape 3, a first VX2000 session and 'UV'. The full place name, people and footage date remain intentionally unresolved.",
+      "credit": "Indyskate / YouTube",
+      "source": {
+        "class": "B",
+        "label": "Indyskate YouTube",
+        "url": "https://www.youtube.com/watch?v=q03cPzaj3bQ"
+      },
+      "rights_note": "Use supported YouTube link/embed only after normal playback metadata is available; do not rehost the video file unless first-party master rights are separately confirmed.",
+      "confidence": "medium-high",
+      "verified": true,
+      "added_at": "2026-09-30"
     }
   ]
 }
