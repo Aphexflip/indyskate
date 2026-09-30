@@ -1,48 +1,57 @@
 # IndySkate Project State
 
-Last updated: 2026-09-29
+Last updated: 2026-09-30
 
 ## Production
 - Public domain: https://indyskate.com
 - GitHub repository: `Aphexflip/indyskate`
 - Default branch: `main`
-- Homepage cleanup merged to `main` in PR #7 and repository validation passed.
-- The public domain is still serving the legacy site, so the new GitHub build is **not yet the production site**.
-- Cloudflare deployment work is active. The repo now includes a Workers Static Assets configuration targeting `public/`, which matches Cloudflare's current recommended path for new static sites.
-- Deployment/DNS connection remains the current blocker until the Cloudflare project and custom domains are verified. GitHub issue #2 tracks this work.
+- Cloudflare nameserver cutover and custom-domain activation completed September 30, 2026.
+- Both `indyskate.com` and `www.indyskate.com` were externally verified serving the new build.
+- Canonical metadata points to `https://indyskate.com/`.
+- Cloudflare Workers Static Assets serves `public/`.
 
-## Current product direction
-Minimal, archive-first IndySkate site that feels complete even while the historical archive is still being recovered.
+## Product direction
+IndySkate is locked as **50/50 living Indiana skate scene + permanent Indianapolis archive**.
 
-## Current implementation
-- Static site under `public/`
-- Cloudflare Workers Static Assets deployment configuration in `wrangler.jsonc`
-- Data-driven archive file at `public/data/archive.json`
-- Responsive editorial layout
-- Homepage explains the archive mission instead of looking accidentally unfinished
-- Verified-record counter wired to archive data
-- Clear archive-recovery / submission call to action
-- No fake historical records or generated archive imagery
-- Empty-state UI intentionally explains why unverified content is not published
-- Repository validation workflow enabled
+The homepage should answer:
+- what is happening in Indiana skateboarding now?
+- what events are coming up?
+- where can people skate?
+- who and what projects are active?
+- what historical material has been recovered?
+- how does current scene material connect to older people/places/projects?
 
-## Current backlog
-- Connect the production domain to the new GitHub/Cloudflare deployment
-- Recover historical IndySkate site and media
-- Build archive year browser from verified records
-- Build verified Indy video archive with in-site playback
-- Build Indianapolis skate spot archive
-- Import first source-backed archive records
-- Replace email-only submissions with a structured submission form when useful
+Erik's 20+ years of filming, skating, projects, photos and site history are part of the archive itself. There are 50+ tapes from roughly 1999–2009 waiting for structured inventory and digitization.
 
-## Current priority
-1. Point production at the new GitHub build and verify automatic deploys from `main`.
-2. Recover and catalog real IndySkate material from owned files, current site sources, and archived site captures.
-3. Populate the archive only with verified/source-backed records.
-4. Turn the first recovered material into useful year, skater, spot, photo, and video views.
+## V1 implementation
+Branch: `agent/v1-live-feed-archive`
 
-## Important constraints
-- Repository evidence and source files override chat assumptions.
-- Historical metadata must be sourced or explicitly marked unknown.
+V1 adds:
+- scrolling current-scene feed;
+- feed filters;
+- verified upcoming event data;
+- verified Indianapolis skate places;
+- source registry;
+- empty relational foundations for people and collections;
+- existing source-backed archive dataset;
+- validation across all V1 data files.
+
+Initial verified current sources include Q Skatepark, Indy Parks, Visit Indy and Indianapolis Skatepark Advocates.
+
+## Immediate next priorities
+1. Merge and verify V1 production deployment.
+2. Expand the source registry with trusted Indiana skate YouTube channels, shops, parks, crews, skaters and event organizers.
+3. Add supported automatic discovery for sources where practical, starting with YouTube/RSS/structured feeds.
+4. Inventory a small pilot group of Erik's tapes before attempting bulk digitization.
+5. Add the first real archive records and connect them to people/places/projects.
+6. Build map UX after place data has enough depth.
+7. Add Social V0 only after the feed/archive foundations are stable.
+
+## Constraints
+- Repository/source evidence overrides chat assumptions.
+- Historical metadata must be sourced or explicitly marked unknown/approximate.
+- Current feed content must have a recorded source.
 - Original media color should be preserved.
-- Large original media should eventually be stored outside Git in an appropriate media/object store while metadata stays version-controlled.
+- Large masters should not live in Git; use appropriate object storage later.
+- Do not re-open the completed DNS/hosting project unless a concrete production defect appears.

@@ -1,13 +1,24 @@
 # IndySkate
 
-IndySkate is an archive-first public website preserving and organizing Indianapolis skateboarding history while serving the current scene.
+IndySkate is the living Indiana skateboarding hub and permanent Indianapolis archive.
 
-## Core principle
+## North star
 
-The site should be visually minimal, direct, and content-first. Historical media should be presented clearly, with original color and aspect ratio preserved where practical. No fake archival content, fake names, fake dates, or decorative filler.
+The site is intentionally **50/50 current scene + archive**:
 
-## Current phase
+- a scrolling feed of current Indiana skate videos, events, parks, shops, projects and scene activity;
+- a source-backed archive of Indianapolis skateboarding history, including Erik's 20+ years of filming, skating, photos, projects and 50+ tapes from roughly 1999–2009.
 
-Initial repository bootstrap and Concept 3 implementation.
+The long-term goal is simple: **be the place to go if you skate in Indiana.**
 
-See `AGENTS.md` and `docs/PROJECT_STATE.md` before making changes.
+## Core principles
+
+- Current content should feel alive and useful every day.
+- Historical content must remain source-backed and explicit about uncertainty.
+- No fake archival content, fake names, fake dates, or AI-generated material presented as history.
+- People, places, media, events, sources and projects should be relational rather than disconnected pages.
+- Indiana is the primary geography, with Indianapolis at the center.
+- Social/community features are a major future layer, but moderation and provenance come first.
+- Monetization comes later and should strengthen the scene rather than clutter it.
+
+See `AGENTS.md` and `docs/PROJECT_STATE.md` before making substantial changes.
