@@ -47,13 +47,37 @@ function sourceName(sourceId) {
   return source ? source.name : "SOURCE RECORDED";
 }
 
+function combinedFeedItems() {
+  const current = state.feed.filter((item) => item.published === true && item.verified === true);
+  const archive = state.archive
+    .filter((record) => record.verified === true)
+    .map((record) => ({
+      id: "feed-" + record.id,
+      kind: "archive",
+      media_type: record.type,
+      title: record.title,
+      summary: record.description || recordLabel(record),
+      date: record.added_at || null,
+      date_label: record.year ? "ARCHIVE · " + record.year : "ARCHIVE · DATE UNKNOWN",
+      sort_date: record.added_at || record.year || "",
+      location: record.location || record.spot || "INDIANA ARCHIVE",
+      source_url: record.source && record.source.url ? record.source.url : null,
+      source_label: record.source && record.source.label ? record.source.label : "ARCHIVE SOURCE",
+      thumbnail_url: record.thumbnail_url || null,
+      verified: true,
+      published: true
+    }));
+
+  return [...current, ...archive];
+}
+
 function renderStats() {
   const feedCount = document.querySelector("#feed-count");
   const eventCount = document.querySelector("#event-count");
   const sourceCount = document.querySelector("#source-count");
   const recordCount = document.querySelector("#record-count");
 
-  if (feedCount) feedCount.textContent = state.feed.filter((item) => item.published === true).length;
+  if (feedCount) feedCount.textContent = combinedFeedItems().length;
   if (eventCount) eventCount.textContent = state.events.filter((item) => item.status === "upcoming" && item.verified === true).length;
   if (sourceCount) sourceCount.textContent = state.sources.filter((item) => item.verified === true).length;
 
@@ -67,9 +91,12 @@ function renderFeed(filter = "all") {
   const target = document.querySelector("#feed-list");
   if (!target) return;
 
-  const items = state.feed
-    .filter((item) => item.published === true && item.verified === true)
-    .filter((item) => filter === "all" || item.kind === filter)
+  const items = combinedFeedItems()
+    .filter((item) => {
+      if (filter === "all") return true;
+      if (filter === "video") return item.media_type === "video" || item.kind === "video";
+      return item.kind === filter;
+    })
     .sort((a, b) => String(b.sort_date || "").localeCompare(String(a.sort_date || "")));
 
   if (!items.length) {
@@ -78,14 +105,25 @@ function renderFeed(filter = "all") {
   }
 
   target.innerHTML = items.map((item) => {
-    const source = sourceName(item.source_id);
+    const source = item.source_label || sourceName(item.source_id);
+    const sourceUrl = safeUrl(item.source_url);
+    const label = item.kind === "archive" && item.media_type
+      ? "ARCHIVE " + String(item.media_type).toUpperCase()
+      : String(item.kind || "update").toUpperCase();
+    const dateLabel = item.date_label || formatDate(item.date);
+    const media = item.thumbnail_url
+      ? '<a class="feed-thumb" href="' + escapeHtml(sourceUrl) + '" target="_blank" rel="noopener">' +
+        '<img src="' + escapeHtml(item.thumbnail_url) + '" alt="' + escapeHtml(item.title || "IndySkate archive video") + '" loading="lazy"></a>'
+      : "";
+
     return '<article class="feed-item">' +
-      '<div class="feed-kicker"><strong>' + escapeHtml(String(item.kind || "update").toUpperCase()) + '</strong>' +
-      escapeHtml(formatDate(item.date)) + '</div>' +
-      '<div class="feed-copy"><h3>' + escapeHtml(item.title) + '</h3><p>' + escapeHtml(item.summary || "") + '</p></div>' +
+      '<div class="feed-kicker"><strong>' + escapeHtml(label) + '</strong>' +
+      escapeHtml(dateLabel) + '</div>' +
+      '<div class="feed-copy">' + media + '<h3>' + escapeHtml(item.title) + '</h3><p>' + escapeHtml(item.summary || "") + '</p></div>' +
       '<div class="feed-source">' + escapeHtml(item.location || "INDIANA") +
-      '<br><a href="' + escapeHtml(safeUrl(item.source_url)) + '" target="_blank" rel="noopener">SOURCE: ' +
-      escapeHtml(source) + ' ↗</a></div>' +
+      (sourceUrl !== "#" ? '<br><a href="' + escapeHtml(sourceUrl) + '" target="_blank" rel="noopener">' +
+      (item.kind === "archive" && item.media_type === "video" ? "WATCH" : "SOURCE") + ': ' +
+      escapeHtml(source) + ' ↗</a>' : '') + '</div>' +
       '</article>';
   }).join("");
 }
