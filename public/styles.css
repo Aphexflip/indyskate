@@ -14,7 +14,7 @@ body{
   margin:0;
   background:radial-gradient(circle at 80% -10%,rgba(255,255,255,.04),transparent 30rem),var(--bg);
   color:var(--ink);
-  font-family:"Courier New",Courier,monospace;
+  font-family:Arial,Helvetica,sans-serif;
   line-height:1.4;
 }
 a{color:inherit;text-decoration:none}
@@ -25,8 +25,8 @@ button{font:inherit;color:inherit}
 nav{display:flex;gap:20px;font-size:.68rem;font-weight:800;color:#aaa69e;overflow:auto}
 nav a:hover,nav a:focus-visible{color:#fff}
 .hero{min-height:470px;padding:62px 0 42px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:52px;align-items:end}
-.eyebrow,.status,.section-rule h2,.site-footer{font-size:.68rem;letter-spacing:.075em}
-.hero h1{margin:14px 0 0;max-width:940px;font-size:clamp(3rem,7vw,6.8rem);line-height:.86;letter-spacing:-.075em;font-weight:500}
+.eyebrow,.status,.section-rule h2,.site-footer{font-family:"Courier New",Courier,monospace;font-size:.68rem;letter-spacing:.075em}
+.hero h1{margin:14px 0 0;max-width:940px;font-size:clamp(3rem,7vw,6.8rem);line-height:.88;letter-spacing:-.065em;font-weight:800}
 .hero h1 span{color:#8f8b84}
 .hero-intro{max-width:760px;margin:24px 0 0;color:#b8b4ac;font-size:clamp(.95rem,1.4vw,1.12rem);line-height:1.6}
 .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
@@ -48,7 +48,7 @@ nav a:hover,nav a:focus-visible{color:#fff}
 .feed-shell,.archive-shell,.places-shell{padding:58px 0 74px}
 .events-shell,.featured,.recovery,.about{padding-bottom:74px}
 .section-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,440px);gap:40px;align-items:end;margin-bottom:22px}
-.section-heading h2{margin:5px 0 0;font-size:clamp(2.2rem,5vw,4.5rem);line-height:.9;letter-spacing:-.06em;font-weight:500}
+.section-heading h2{margin:5px 0 0;font-size:clamp(2.2rem,5vw,4.5rem);line-height:.92;letter-spacing:-.05em;font-weight:800}
 .section-heading p{margin:0;color:var(--muted);font-size:.84rem;line-height:1.55}
 .feed-tools{display:flex;gap:8px;flex-wrap:wrap;padding:0 0 12px;border-bottom:1px solid var(--rule)}
 .filter{appearance:none;border:1px solid #35332f;background:#0f0f0f;padding:8px 10px;cursor:pointer;font-size:.65rem;font-weight:800;letter-spacing:.05em}
@@ -122,9 +122,29 @@ details[open] summary span:last-child{transform:rotate(45deg)}
   .year-grid,.archive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:560px){
-  .site-header{display:block;padding:16px 0}
-  nav{margin-top:14px;gap:14px}
-  .hero h1{font-size:clamp(2.8rem,15vw,4.6rem)}
+  .wrap{width:min(calc(100% - 32px),var(--max))}
+  .site-header{display:block;padding:18px 0 14px}
+  nav{margin-top:14px;gap:18px;padding-bottom:3px;font-size:.64rem}
+  .hero{padding-top:36px;padding-bottom:34px;gap:24px}
+  .hero h1{font-size:clamp(2.65rem,14vw,4.25rem);line-height:.9}
+  .hero-intro{margin-top:18px;line-height:1.5}
+  .hero-actions{margin-top:20px}
+  .cta{min-height:44px}
+  .scene-status{padding:15px}
+  .feed-shell,.archive-shell,.places-shell{padding:44px 0 56px}
+  .events-shell,.featured,.recovery,.about{padding-bottom:56px}
+  .section-heading{margin-bottom:18px}
+  .section-heading h2{font-size:clamp(2rem,12vw,3.35rem)}
+  .feed-tools{gap:6px;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
+  .feed-tools::-webkit-scrollbar{display:none}
+  .filter{flex:0 0 auto;padding:9px 11px}
+  .feed-copy h3{font-size:1.55rem;line-height:1.05}
+  .feed-thumb{width:100%;max-width:none}
+  .event-card,.place-card{padding:16px}
+  summary{padding:15px 14px}
+  .detail-body{padding:14px}
+  .archive-meta{font-size:.58rem}
+  .recovery-card h2{font-size:clamp(2rem,12vw,3.5rem)}
   .feed-item{grid-template-columns:1fr;gap:8px}
   .feed-source{grid-column:1}
   .empty-feature{padding:18px}
