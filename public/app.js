@@ -36,6 +36,28 @@ function formatDate(value) {
   }).format(date).toUpperCase();
 }
 
+// Compute event freshness in Indiana, not the viewer's device timezone.
+function todayInIndiana(now = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Indiana/Indianapolis",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(now);
+  const value = (type) => parts.find((part) => part.type === type)?.value;
+  return [value("year"), value("month"), value("day")].join("-");
+}
+
+function upcomingEvents(now = new Date()) {
+  const today = todayInIndiana(now);
+  return state.events.filter((event) =>
+    event.verified === true &&
+    event.status === "upcoming" &&
+    /^\d{4}-\d{2}-\d{2}$/.test(String(event.date || "")) &&
+    event.date >= today
+  );
+}
+
 function recordLabel(record) {
   const skaters = Array.isArray(record.skaters) ? record.skaters.join(", ") : record.skater;
   const parts = [record.year, skaters, record.spot].filter(Boolean);
@@ -78,7 +100,7 @@ function renderStats() {
   const recordCount = document.querySelector("#record-count");
 
   if (feedCount) feedCount.textContent = combinedFeedItems().length;
-  if (eventCount) eventCount.textContent = state.events.filter((item) => item.status === "upcoming" && item.verified === true).length;
+  if (eventCount) eventCount.textContent = upcomingEvents().length;
   if (sourceCount) sourceCount.textContent = state.sources.filter((item) => item.verified === true).length;
 
   const verifiedRecords = state.archive.filter((record) => record.verified === true).length;
@@ -132,8 +154,7 @@ function renderEvents() {
   const target = document.querySelector("#events-list");
   if (!target) return;
 
-  const events = state.events
-    .filter((event) => event.verified === true && event.status === "upcoming")
+  const events = upcomingEvents()
     .sort((a, b) => String(a.date || "").localeCompare(String(b.date || "")));
 
   if (!events.length) {
